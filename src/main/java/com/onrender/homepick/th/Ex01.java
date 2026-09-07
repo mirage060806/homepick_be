@@ -7,9 +7,9 @@ import org.springframework.web.bind.annotation.GetMapping;
 @Controller
 public class Ex01 {
 
-    @GetMapping("/th")
+    @GetMapping("/th/ex01")
     public String th01(Model model) {
         model.addAttribute("message", "안녕하세요!");
-        return "th/th01_텍스트";
+        return "th/ex01";
     }
 }
