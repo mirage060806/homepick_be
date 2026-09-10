@@ -2,25 +2,16 @@
     "configurations": [
         {
             "type": "java",
-            "name": "Ex01_객체생성",
-            "request": "launch",
-            "mainClass": "com.onrender.homepick.basic.Ex01_객체생성",
-            "projectName": "homepick-homepick_be"
-        },
-        {
-            "type": "java",
-            "name": "Main",
-            "request": "launch",
-            "mainClass": "com.onrender.homepick.basic.Main",
-            "projectName": "homepick-homepick_be"
-        },
-        {
-            "type": "java",
             "name": "Spring Boot-HomepickApplication<homepick>",
             "request": "launch",
             "cwd": "${workspaceFolder}",
             "mainClass": "com.onrender.homepick.HomepickApplication",
             "projectName": "homepick",
+            "serverReadyAction": {
+                "pattern": "Started HomepickApplication in",
+                "uriFormat": "http://localhost:8080",
+                "action": "openExternally"
+            },
             "args": "",
             "envFile": "${workspaceFolder}/.env"
         }
