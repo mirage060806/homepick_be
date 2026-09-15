@@ -10,11 +10,13 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+// Bean(빈)
 @Controller
 @RequestMapping("/member")
 @RequiredArgsConstructor
 public class RegisterController{
 
+    // DI(의존성 주입)
     private final InMemoryMemberRepository repository;
 
     @GetMapping("/register")
