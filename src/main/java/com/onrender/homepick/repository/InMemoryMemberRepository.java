@@ -14,13 +14,10 @@ public class InMemoryMemberRepository{
     // Key: email, Value: 가입 정보
     private final Map<String, RegisterRequest> store = new ConcurrentHashMap<>();
 
-    // 이메일 존재 여부 확인
-    // 접근제한자 리턴타입 메서드명(매개변수){}
     public boolean existsByEmail(String email){
         return store.containsKey(email);
     }
 
-    // 가입 정보 저장
     public void save(RegisterRequest member){
         store.put(member.getEmail(), member);
     }

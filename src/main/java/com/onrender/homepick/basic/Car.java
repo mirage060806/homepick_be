@@ -2,11 +2,11 @@ package com.onrender.homepick.basic;
 
 import lombok.Getter;
 
-@Getter 
+@Getter
 public class Car{
     // 인스턴트 필드
-    String model;
-    int speed;
+    private String model;
+    private int speed;
 
     // 생성자(Contructor) 함수
     public Car(String model, int speed){
@@ -18,6 +18,6 @@ public class Car{
     //     return model;
     // }
     // public String getSpeed() {
-    //     return model;
+    //     return speed;
     // }
 }

@@ -17,7 +17,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class RegisterController{
 
     // DI(의존성 주입)
-    // final 키워드를 사용하여 상수로 선언(재할당 불가능)
     private final InMemoryMemberRepository repository;
 
     @GetMapping("/register")
@@ -27,18 +26,16 @@ public class RegisterController{
 
     @PostMapping("/register")
     public String process(@ModelAttribute RegisterRequest req, Model model){
-        // 이메일 존재 여부 확인
+        //
         if (repository.existsByEmail(req.getEmail())) {
             model.addAttribute("error", "이미 사용 중인 이메일입니다.");
             return "member/register";
         }
-        // 객체.메서드(인자);
         repository.save(req);
 
         // 콘솔 창에 출력하여 확인
-        System.out.println(">> 신규 회원가입 등록 완료: " + req.getName() + " (" + req.getEmail() + ", " + req.getPassword() + ")");
+        System.out.println(">> 신규 회원가입 등록 완료: " + req.getName() + " (" + req.getEmail() + ")");
 
-        // redirect: /member/resister 1번째 요청 -> /member/login 2번째 요청
         return "redirect:/member/login";
     }
 

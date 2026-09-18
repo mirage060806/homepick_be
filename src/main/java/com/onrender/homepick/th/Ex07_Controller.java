@@ -16,7 +16,7 @@ public class Ex07_Controller {
     // return "th/ex07";
     // }
 
-    // // 경로 변수 매핑 (/th/ex06/1, /th/ex07/2 ...)
+    // // 경로 변수 매핑 (/th/ex07/1, /th/ex07/2 ...)
     // @GetMapping("/th/ex07/{id}")
     // public String postDetail(@PathVariable("id") int id, Model model) {
 

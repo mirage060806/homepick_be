@@ -11,14 +11,12 @@ public class Ex04_Controller {
     
     @GetMapping("/th/ex04")
     public String ex04(Model model) {
-
-        // board 객체 추가 (id=10L 지정)
+        // link 객체 추가 (id=10L 지정)
         model.addAttribute("link", new Ex04_Dto(10L));
-
         return "th/ex04";
     }
 
-    // /th/login?id=10 요청 처리
+        // /th/login?id=10 요청 처리
     @GetMapping("/th/ex04/login")
     public String ex04login(@RequestParam("id") Long id, Model model) {
         model.addAttribute("loginId", id);
