@@ -11,5 +11,5 @@ public class RegisterRequest{
     private String name;
 
     // 기본 생성자
-    public RegisterRequest(){}
+    // RegisterRequest(){}
 }
